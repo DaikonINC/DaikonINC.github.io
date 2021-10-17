@@ -1,0 +1,24 @@
+
+#form-field {
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  border-width: 1px;
+  
+}
+
+input {
+  margin-top : 10px; 
+  margin-bottom: 10px;
+}
+
+#submit {
+  margin-top: 10px;
+}
+
+body {
+  text-align: center;
+  
+  /* background-image: url('demopage.jpg');
+  background-size: cover; */
+
+}

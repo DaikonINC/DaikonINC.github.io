@@ -1,0 +1,77 @@
+img {
+  width : 500px; 
+  height : 500px; 
+  float: left;
+  margin-left: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+body {
+  background-image: url('productfeaturebg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* navbar CSS */ 
+header {
+  background-color:white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header ::after{
+  content: ''; 
+  display: table; 
+  clear: both;
+  padding: 0;
+}
+
+nav ul {
+  color: white;
+  float: right; 
+  list-style-type: none;
+  padding: 0
+}
+
+nav li {
+  display: inline-block;
+  margin-left : 10px;
+  margin-right: 40px
+}
+
+#comp-name {
+  float: left;
+  margin-left: 10px; 
+  margin-top: 15px;
+}
+
+/* navbar CSS end */
+
+.responsive {
+  max-width: 700px; 
+  max-height: 900px; 
+}
+
+#info-area {
+  width: 400px; 
+  height: 300px;
+  background-color: white;
+  float: right; 
+  padding: 20px;
+  margin-right: 200px;
+  margin-top: 50px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#demo-button {
+  margin-left: 210px;
+  margin-top : 30px;
+}
+
