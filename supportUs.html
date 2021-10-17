@@ -4,8 +4,9 @@
 <head>
     <title>Greenhouse</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="supportUs.css">
+    <script src="supportUs.js"></script>
 </head>
-
 <body>
     <!-- Navbar placeholder-->
     <nav>
@@ -59,7 +60,13 @@
             </td>
         </tr>
     </table>
-
+    <div class="modal" id="donationSignUp">
+        <div class="modal-content">
+            <h2>Give us your email address and we'll send you a link to donate!</h2>
+            <h3>Email: <span><input type="text" id="email"></span></h3>
+            <button type="button" id="submitBtn"  onclick="closeModal()">Submit!</button>
+        </div>
+    </div>
 
 </body>
 
