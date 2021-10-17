@@ -1,0 +1,272 @@
+body {
+    /*Setting body to fill screen*/
+    width: 100vw;
+    background-color: black;
+}
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 max(2px, 0.2vh);
+}
+h2 {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow{
+    from{
+        text-shadow: 0 0 0.2vh;
+    }
+    to {
+        text-shadow: 0 0 0.6vh;
+    }
+}
+h1 {
+    color: white;
+    font-size: max(25px, 5vh);
+}
+h2 {
+    font-size: max(16px, 4vh);
+}
+h3 {
+    font-size: max(12px, 3vh);
+}
+
+#NAV {
+    text-align: center;
+    font-size: 4vh;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: green;
+    width: 97vw;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 1vw;
+}
+
+/*Image sections - img, corresponding animation box, and text*/
+.imgSpace {
+    width: max(380px, 95vw);
+    height: max(320px, 80vh);
+}
+.imgPic {
+    float: left;
+    width: max(200px, 50vw);
+    height: max(200px, 50vh);
+    border: 1px solid black;
+    border-radius: 1vw;
+}
+.imgAnimation {
+    position: relative;
+    text-align: center; 
+    vertical-align: top;
+    display: inline-block;
+    width: max(160px, 40vw);
+    height: max(200px, 50vh);
+    left: max(19.2px, 4.8vw);
+    border: 1px solid black;
+    border-radius: 1vw;
+}
+.imgList {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: calc(max(400px, 95vw)-font-size);
+    height: max(120px, 30vh);
+    top: min(-20px, -2vh);
+    text-align: center;
+    overflow: auto;
+    list-style: none;
+}
+
+/*The "wires" transporting clean energy*/
+.wire {
+    position: absolute;
+    left: max(60px, 15vw);
+    width: max(4px, 1vw);
+    height: max(120px, 30vh);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 2px;
+}
+.electricity {
+    z-index: -1;
+    position: absolute;
+    background-color: rgb(194, 89, 204);
+    left: max(1px, 0.25vw);
+    width: max(2px, 0.5vw);
+    height: max(6px, 1.5vh);
+    box-shadow: 0px 0px max(4px, 1vw) rgb(194, 89, 204);
+    background-color: white;
+    box-shadow: 0px 0px max(4px, 1vw) white;
+    animation: flow 1.5s linear infinite;
+}
+
+/*Animations for flowing electricity*/
+@keyframes flow{
+    from{}
+    to{
+        transform: translate(0, max(240px, 60vh));
+    }
+}
+@keyframes flowS{
+    from{}
+    to{
+        box-shadow: 0 0 0 white;
+        transform: translate(0, max(168px, 42vh));
+    }
+}
+
+/*Individual images and text and such*/
+#img1 {
+    box-shadow: 0px 0px max(40px, 10vw) rgb(194, 89, 204);
+}
+#elec1 {
+    background-color: rgb(89, 181, 204);
+    box-shadow: 0px 0px max(4px, 1vw) rgb(89, 181, 204);
+}
+#text1 {
+    color:rgb(194, 89, 204);
+}
+#img2 {
+    box-shadow: 0px 0px max(40px, 10vw) rgb(63, 177, 88);
+}
+#elec2 {
+    background-color: rgb(63, 177, 88);
+    box-shadow: 0px 0px max(4px, 1vw) rgb(63, 177, 88);
+}
+#text2 {
+    color: rgb(63, 177, 88);
+}
+#img3 {
+    box-shadow: 0px 0px max(40px, 10vw) rgb(100, 73, 255);
+}
+#text3 {
+    color: rgb(100, 73, 255);
+}
+#funding {
+    color: rgb(89, 181, 204);
+}
+#Greenhouse {
+    color: rgb(63, 177, 88);
+}
+
+/*Final animation box*/
+#final {
+    margin: auto;
+    width: max(320px, 80vw);
+    height: max(320px, 80vh);
+    text-align: center; 
+    color: white;
+    border: 1px solid black;
+    border-radius: 1vw;
+    box-shadow: 0px 0px max(4px, 1vw) white;
+}
+#finh2{
+    width: max(320px, 80vw);
+    height: max(40px, 4vh);
+    overflow: auto;
+}
+#charge {
+    z-index: -1;
+    position: absolute;
+    width: max(120px, 30vw);
+    height: max(60px, 15vh);
+    left: max(60px, 15vw);
+    border-top: none;
+    border-right: none;
+    border-left: max(5px, 1.25vw) solid white;
+    border-bottom: max(5px, 1.25vw) solid white;
+    border-bottom-left-radius: max(4px, 1vw);
+    box-shadow: 0 max(4px, 1vw) max(4px, 1vw) min(-4px, -1vw) white, min(-4px, -1vw) 0 max(4px, 1vw) min(-4px, -1vw) white;
+}
+.button{
+    z-index: 1;
+    display: inline-block;
+    width: max(160px, 20vw);
+    height: max(40px, 10vh);
+    border: 1px solid white;
+    border-radius: 1vw;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    animation: bgChange 20s infinite alternate;
+}
+@keyframes bgChange{
+    0%{background-color: black;}
+    10%{background-color: rgb(121, 218, 250);}
+    20%{background-color: rgb(22, 22, 148);}
+    30%{background-color: rgb(170, 83, 97);}
+    40%{background-color: purple;}
+    50%{background-color: orange;}
+    60%{background-color: red;}
+    70%{background-color: rgb(219, 219, 49);}
+    80%{background-color: rgb(95, 235, 95);}
+    90%{background-color: rgb(8, 155, 8);}
+    100%{background-color: black;}
+}
+
+/*Final Animation*/
+.wifi{
+    margin: auto;
+    position: relative;
+    top: max(12px, 3vh);
+    width: max(64px, 16vw);
+    height: max(64px, 16vh);
+}
+.signal{
+    margin: auto;
+    position: relative;
+    width: max(64px, 16vw);
+    height: max(64px, 16vh);
+    border: 4px solid transparent;
+    border-bottom-color: rgb(70, 255, 110);
+    border-radius: 100%;
+    animation: community 1s linear infinite alternate;
+}
+.line {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    top: min(-60px, -15vh);
+    width: max(2px, 0.5vw);
+    height: min(25vw, 25vh);
+    opacity: 0;
+    border: 1px solid rgb(70, 255, 110);
+    border-radius: 1vw;
+}
+.person {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    width: max(60px, 15vw);
+    height: max(60px, 15vw);
+    padding: max(12px, 3vw) max(12px, 3vw) max(12px, 3vw) max(12px, 3vw);
+    opacity: 0;
+}
+@keyframes community {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+.head {
+    position: relative;
+    margin: auto;
+    width: max(20px, 5vw);
+    height: max(20px, 5vw);
+    background-color: white;
+    border-radius: max(10px, 2.5vw);
+}
+.body {
+    position: relative;
+    margin: auto;
+    width: max(40px, 10vw);
+    height: max(20px, 5vw);
+    background-color: white;
+    border-top-left-radius: max(20px, 5vw);
+    border-top-right-radius: max(20px, 5vw);
+}
+
