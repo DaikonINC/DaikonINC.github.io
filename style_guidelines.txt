@@ -1,0 +1,18 @@
+Style guide for Daikon Website
+
+-Dark Green background
+-rgb(0, 100, 5)
+
+Accent colors
+-White, black, nature colors (flexible if blended well)
+
+Fonts
+-Raleway - Main texts
+-Abril fatface - Headers
+-Comfortaa - Short texts i.e slogan, title
+
+Input like buttons, form input
+-Slightly round
+-Cursor becomes pointer
+-Background changes 
+-Background white, text black

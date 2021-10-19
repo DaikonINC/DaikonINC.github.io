@@ -1,7 +1,7 @@
 body {
     /*Setting body to fill screen*/
     width: 100vw;
-    background-color: black;
+    background-color: rgb(0, 100, 5);
 }
 
 h1, h2, h3 {
