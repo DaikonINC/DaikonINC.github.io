@@ -1,18 +1,14 @@
-//Nav bar
-const hamburger = document.querySelector(".hamburger");
-const mobile_menu = document.querySelector(".mobile");
-hamburger.addEventListener("click", function(){
-    hamburger.classList.toggle("is-active");
-    mobile_menu.classList.toggle("is-active");
-});
-//^Nav bar^
-
 //Photo gallery
 const button = document.querySelector(".button");
 const sides = document.querySelectorAll(".side");
 var current = sides.length-1;
 button.addEventListener("click", function(){
-    sides[current].style.animation = "slide 3s";
+    if(current % 2 == 0){
+        sides[current].style.animation = "slide 3s";
+    }
+    else{
+        sides[current].style.animation = "slideR 3s";
+    }
     sides[current].style.animationFillMode = "forwards";
     current--;
     if(current < 0){

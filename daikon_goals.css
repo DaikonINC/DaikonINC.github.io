@@ -166,20 +166,24 @@ body {
     height: max(40px, 10vh);
     border: 1px solid white;
     border-radius: 1vw;
-    background-color: black;
+    background-color: var(--dgreen);
     color: white;
     cursor: pointer;
-    animation: bgChange 16s infinite alternate;
+    animation: bgChange 10s infinite alternate;
+}
+.button h2 {
+    transition: 0.2s;
+}
+.button:hover {
+    color: var(--lyellow);
 }
 @keyframes bgChange{
-    12.5%{background-color: var(--dgreen)}
-    25%{background-color: var(--lgreen2);}
-    37.5%{background-color: var(--lgreen);}
-    50%{background-color: var(--lblue);}
-    62.5%{background-color: var(--lblue2);}
-    75%{background-color: var(--lgreen);}
-    87.5%{background-color: var(--lgreen2);}
-    100%{background-color: var(--dgreen)}
+    0%{background-color: var(--lgreen)}
+    20%{background-color: var(--dgreen)}
+    40%{background-color: var(--lgreen2);}
+    60%{background-color: var(--lblue);}
+    80%{background-color: var(--lblue2);}
+    100%{background-color: var(--lgreen2);}
 }
 
 /*Final Animation*/
@@ -198,7 +202,7 @@ body {
     border: 4px solid transparent;
     border-bottom-color: rgb(70, 255, 110);
     border-radius: 100%;
-    animation: broadcast 1.5s linear infinite alternate, borderChange 16s infinite alternate;
+    animation: broadcast 1.5s linear infinite alternate, borderChange 10s infinite alternate;
 }
 @keyframes broadcast{
     from{
@@ -209,14 +213,11 @@ body {
     }
 }
 @keyframes borderChange{
-    12.5%{border-bottom-color: var(--dgreen)}
-    25%{border-bottom-color: var(--lgreen2);}
-    37.5%{border-bottom-color: var(--lgreen);}
-    50%{border-bottom-color: var(--lblue);}
-    62.5%{border-bottom-color: var(--lblue2);}
-    75%{border-bottom-color: var(--lgreen);}
-    87.5%{border-bottom-color: var(--lgreen2);}
-    100%{border-bottom-color: var(--dgreen)}
+    20%{border-bottom-color: var(--dgreen)}
+    40%{border-bottom-color: var(--lgreen2);}
+    60%{border-bottom-color: var(--lblue);}
+    80%{border-bottom-color: var(--lblue2);}
+    100%{border-bottom-color: var(--lgreen2);}
 }
 
 #gallery {
@@ -230,15 +231,26 @@ body {
     display: inline-block;
     position: relative;
     margin: auto;
-    width: max(120px, 30vw);
+    width: max(100px, 25vw);
     height: max(120px, 30vh);
     transition: 1s;
+    transform-origin: max(40px, 10vw) max(40px, 10vh);
     border-radius: 1vw;
 }
 @keyframes slide {
     0% {}
     50% {
-        transform: translateX(min(-132px, -33vw));
+        transform: translate(min(-132px, -33vw), min(-20px, -5vh))  rotate(-10deg);
+    }
+    100% {
+        z-index: -1;
+    }
+}
+@keyframes slideR {
+    0% {}
+    50% {
+        transform-origin: max(60px, 15vw) max(40px, 10vh);
+        transform: translate(max(132px, 33vw), min(-20px, -5vh))  rotate(10deg);
     }
     100% {
         z-index: -1;
