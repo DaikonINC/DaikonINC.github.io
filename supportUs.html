@@ -4,67 +4,89 @@
 <head>
     <title>Greenhouse</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="daikon_nav.css">
     <link rel="stylesheet" href="supportUs.css">
     <script src="supportUs.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <img src="leafSmall.png" id="leaf" style="display: none;">
 </head>
+
 <body>
+    <canvas id="background"></canvas>
     <!-- Navbar placeholder-->
     <nav>
-        <a href="#"> Home </a>
-        <a href="#"> Product Feature </a>
-        <a href="#"> Demo </a>
-        <a href="#"> Funding/Support</a>
-        <a href="#"> Team/contact </a>
-        <a href="#"> Company Goals </a>
-        <a href="#"> Community </a>
+        <div class = "container">
+            <h1><a id = "home" href = "https://daikoninc.github.io/">Daikon</a></h1>
+            <div class = "menu">
+                <a href = "https://daikoninc.github.io/daikon_productfeature.html"><h3>Products</h3></a>
+                <a href = "https://daikoninc.github.io/daikon_goals.html"><h3>Goals</h3></a>
+                <a href = "https://daikoninc.github.io/community_page.html"><h3>Community</h3></a>
+                <a href = "https://daikoninc.github.io/Team%20Contact.html"><h3>Contact</h3></a>
+                <a href = "https://daikoninc.github.io/supportUs.html"><h3>Support</h3></a>
+            </div>
+            <button class = "hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
     <div class='main-center'>
-        <h1 style="color:rgb(0, 131, 0);">Thank you.</h1>
-        <h2 id="counter">As of [today's date], we have reached over [n] downloads</h2>
+        <h1>Thank you.</h1>
+        <div class="counter-container">
+            <h2 id="counter">As of [today's date], we have reached over [n] downloads</h2>
+        </div>
     </div>
-    <h1 style="text-align: center;">How you can support our cause:</h1>
+    <h1 style="text-align: center;" id="table-title">How you can support our cause:</h1>
     <table class="tripleCollumn">
-        <tr>
-            <td class="collumn">
-                <div class=collumn-content>
-                    <h3 class="collumn-header">Download Greenhouse, plant a tree.</h3>
-                    <img src="https://plantwithpurpose.org/wp-content/uploads/2017/11/Tree-Planting.jpg"
-                        alt="(Trees being planted)" class="subsection">
-                    <p>In addition to helping you save the environment with Greehouse, Daikon pledges to
-                        plant a tree for every download of the Greenhouse app.</p>
-                </div>
-            </td>
-            <td class="collumn">
-                <div class=collumn-content>
-                    <h3 class="collumn-header">Monetary Donations</h3>
-                    <img src="https://www.petalrepublic.com/wp-content/uploads/2020/08/Ultimate-Guide-to-Growing-and-Caring-for-Money-Tree-Plants-scaled.jpg"
-                        alt="(Trees being planted)" class="subsection">
-                    <p>Daikon is happy to accept donations to help us on our journey to save the planet. Donate below!
-                    </p>
-                    <button type="button" onclick="openModal()" id="donateBtn">Donate Now!</button>
-                </div>
-            </td>
-            <td class="collumn">
-                <div class=collumn-content>
-                    <h3 class="collumn-header">Want to do more?</h3>
-                    <img src="https://www.quickanddirtytips.com/sites/default/files/images/4472/handshake.jpg"
-                        alt="handshake" class="subsection">
-                    <p>Want to further help save the planet? Daikon is a pround supporter of the follwing charities:</p>
-                    <ul>
-                        <li><a href="#">[placeholder 1]</a></li>
-                        <li><a href="#">[placeholder 2]</a></li>
-                        <li><a href="#">[placeholder 3]</a></li>
-                        <li><a href="#">[placeholder 4]</a></li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
+        <tbody>
+            <tr>
+                <td class="collumn">
+                    <div class=collumn-content>
+                        <h3 class="collumn-header">Download Greenhouse, plant a tree.</h3>
+                        <img src="https://plantwithpurpose.org/wp-content/uploads/2017/11/Tree-Planting.jpg"
+                            alt="(Trees being planted)" class="subsection">
+                        <p>In addition to helping you save the environment with Greehouse, Daikon pledges to
+                            plant a tree for every download of the Greenhouse app.</p>
+                    </div>
+                </td>
+                <td class="collumn">
+                    <div class=collumn-content>
+                        <h3 class="collumn-header">Monetary Donations</h3>
+                        <img src="https://www.petalrepublic.com/wp-content/uploads/2020/08/Ultimate-Guide-to-Growing-and-Caring-for-Money-Tree-Plants-scaled.jpg"
+                            alt="(Trees being planted)" class="subsection">
+                        <p>Daikon is happy to accept donations to help us on our journey to save the planet. Donate
+                            below!
+                        </p>
+                        <div class="button-container">
+                            <button class="button" type="button" onclick="openModal()" id="donateBtn">Donate
+                                Now!</button>
+                        </div>
+                    </div>
+                </td>
+                <td class="collumn">
+                    <div class=collumn-content>
+                        <h3 class="collumn-header">Want to do more?</h3>
+                        <img src="https://www.quickanddirtytips.com/sites/default/files/images/4472/handshake.jpg"
+                            alt="handshake" class="subsection">
+                        <p>Want to further help save the planet? Daikon is a pround supporter of the following charities:
+                        </p>
+                        <ul>
+                            <li><a href="#">[placeholder 1]</a></li>
+                            <li><a href="#">[placeholder 2]</a></li>
+                            <li><a href="#">[placeholder 3]</a></li>
+                            <li><a href="#">[placeholder 4]</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <div class="modal" id="donationSignUp">
         <div class="modal-content">
             <h2>Give us your email address and we'll send you a link to donate!</h2>
             <h3>Email: <span><input type="text" id="email"></span></h3>
-            <button type="button" id="submitBtn"  onclick="closeModal()">Submit!</button>
+            <button class="button" type="button" id="submitBtn" onclick="closeModal()">Submit!</button>
         </div>
     </div>
 

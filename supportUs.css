@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Raleway&display=swap');
 
 body{
-    background-color: whitesmoke;
+    background-color: rgb(0, 100, 5);
+    font-family: Comfortaa,cursive;
+    color: white;
 }
+
+#background{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: -1;
+}
+
 img.subsection{
     display:block;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 5px;
     border: 3px solid black;
 }
 
@@ -15,12 +27,42 @@ img.subsection{
     text-align: center;
 }
 
+
+.main-center h1{
+    font-size: 60px;
+
+}
+.main-center h1, .main-center h2, .collumn-content h3,#table-title {
+    text-shadow: none;
+    animation: none;
+}
+
+.counter-container{
+    margin:auto;
+    padding: 1% 3% 1% 3%;
+    border-radius: 15px;
+    width: 70%;
+    width:fit-content;
+    background-color: rgb(220,220,220);
+    font-size: 22px;
+    color: black;
+}
 .collumn-content{
-    background-color: rgb(184, 184, 184);
-    height: 80%;
-    padding: 3% 5% 3% 5%;
-    margin:0% 10% 0% 10%;
-    color: rgb(95, 95, 95);
+    height: 100%;
+    background-color: rgb(220,220,220);
+    border-radius: 10px;
+    font-family: Raleway;
+    padding: 3px 5% 3px 5%;
+    margin:0px 15px 0px 15px;
+    color:rgb(73, 73, 73);
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.collumn-content:hover{
+    
+    box-shadow: rgb(0,90,0) 10px 10px;
+    box-shadow: rgba(0,0,0,0.3) 10px 10px;
+    transform: translate(-10px,-10px);
 }
 .collumn-header{
     text-align: center;
@@ -31,26 +73,61 @@ img.subsection{
 }
 .modal{
     display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
 }
 .modal-content{
     background-color: whitesmoke;
+    border-radius: 10px;
     text-align: center;
-    margin: 20% auto;
+    margin: 10% auto;
+    font-family: Raleway;
+    color:rgb(134, 134, 134);
     padding: 30px;
     width: 30%
 }
-table {
-    table-layout: fixed; 
-    width: 100%; 
-    
+.button-container {
+    text-align: center;
+    height: auto;
+    width: inherit;
+}
+.button{
+    background-color: white;
+    border-radius: 7px;
+    border: 2px black solid;
+
+    cursor: pointer;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
 }
 
+#donateBtn{
+    height:30%;
+    width: 60%;
+}
 
+.button:hover{
+    background-color: inherit;
+}
+table td{
+    height:100%;
+    width:33%;
+}
+tbody{
+    height: 100%
+}
+table {
+    width: 100%; 
+    height: 50%;
+}
+
+div.collumn-content a{
+    color:rgb(30,30,30);
+    text-decoration: none;
+}
