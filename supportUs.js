@@ -3,11 +3,20 @@ var modal;
 var previousCount;
 var canvas;
 var img;
+
+
+
 window.onload = function () {
     counter = document.getElementById('counter');
     modal = document.getElementById('donationSignUp');
     previousCount = getCurCount() - 1;
     img = new Image(300, 300);
+    const hamburger = document.querySelector(".hamburger");
+    const mobile_menu = document.querySelector(".mobile");
+    hamburger.addEventListener("click", function(){
+    hamburger.classList.toggle("is-active");
+    mobile_menu.classList.toggle("is-active");
+    });
     img.src = 'leafSmall.png';
     updateCount();
     loopTimer();
