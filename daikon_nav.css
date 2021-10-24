@@ -52,11 +52,12 @@ h3 {
 /*Nav bar*/
 .container {
     width: 97vw;
-    height: max(40px, 10vh);
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    transition: height 0.35s ease;
 }
 nav {
     position: fixed;
@@ -64,9 +65,13 @@ nav {
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: var(--dgreen);
+    /* background-color: var(--dgreen); */
+
     opacity: 90%;
-    border-bottom: 2px solid white;
+    /* border-bottom: 0 solid white; */
+    transition: all 0.35s ease;
+    transition: border-bottom 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 nav h1{
     padding-left: max(20px, 5vw);
