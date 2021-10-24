@@ -19,15 +19,7 @@ window.onload = function () {
 //-------CANVAS STUFF-----------
 
 //create 7 leaves with random starting positions
-var leaves = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-];
+var leaves = [];
 function startCanvas() {
     canvas = document.getElementById("background");
 
@@ -49,17 +41,16 @@ function startCanvas() {
         document.documentElement.clientWidth
     );
 
-    //create 7 leaves with random starting positions
     //populate
-    for (let i = 0; i < leaves.length; i++) {
-        leaves[i][0] = Math.floor(Math.random() * canvas.width);
-        leaves[i][1] = Math.floor(Math.random() * 1500) - 1500-img.height;
-        leaves[i][3] = Math.random()*50;
+    for (let i = 0; i < 10; i++) {
+      setTimeout(addLeaf,(+2000*i));
     }
 
     window.requestAnimationFrame(updatePosition);
 }
-
+function addLeaf(){
+    leaves[leaves.length] = [Math.floor(Math.random() * canvas.width),-img.height,0,Math.random()*50];
+}
 
 function updatePosition() {
     var ctx = canvas.getContext("2d");
@@ -72,10 +63,8 @@ function updatePosition() {
         var x = canvas.width / 2 + canvas.width / 2 * Math.sin(leaves[i][0]-leaves[i][2] * Math.PI / 540);
         var y = leaves[i][1]+ (leaves[i][2]/2)*(leaves[i][3]/50 +0.5)
         if(y >= canvas.height){
-            console.log("yo");
-            
             leaves[i][0] = Math.floor(Math.random() * canvas.width);
-            leaves[i][1] = Math.floor(Math.random() * 500) - 500 - img.height;
+            leaves[i][1] = - img.height;
             leaves[i][2] = 0;
         }
         ctx.save();
