@@ -1,0 +1,194 @@
+/*Below are color and heading stylings you need to add/modify to have the same Nav bar*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
+
+:root {
+    --dgreen: rgb(0, 100, 5);
+    --dgreen2: rgb(20, 139, 26);
+    --dblue: rgb(5, 0, 80);
+    --lblue: rgb(89, 181, 204);
+    --lblue2: rgb(151, 183, 252);
+    --lgreen: rgb(63, 177, 88);
+    --lgreen2: rgb(0, 124, 27);
+    --lorange: rgb(231, 143, 43);
+    --lyellow: rgb(252, 255, 100);
+    --lyellow2:rgb(253, 251, 138);
+}
+
+h1, h2, h3 {
+    text-shadow: 0 0 max(2px, 0.2vh);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+h1, h2 {
+    font-family: 'Comfortaa';
+}
+h3 {
+    font-family: 'Raleway';
+}
+@keyframes glow{
+    from{
+        text-shadow: 0 0 0.2vh;
+    }
+    to {
+        text-shadow: 0 0 0.4vh;
+    }
+}
+h1 {
+    color: white;
+    font-size: min(5vw, 5vh);
+}
+h2 {
+    font-size: min(4vw, 4vh);
+}
+h3 {
+    font-size: min(3vw, 3vh);
+}
+/*Gap below nav bar*/
+.gap {
+    height: 5vh;
+}
+/*^Above are color and heading stylings for Nav bar^*/
+
+/*Nav bar*/
+.container {
+    width: 97vw;
+    height: max(40px, 10vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--dgreen);
+    opacity: 90%;
+    border-bottom: 2px solid white;
+}
+nav h1{
+    padding-left: max(20px, 5vw);
+    letter-spacing: max(2px, 0.5vw);
+    text-transform: uppercase;
+}
+
+/*Nav if small screen*/
+.hamburger {
+    display: block;
+    position: relative;
+    top: 5px;
+    z-index: 5;
+    padding-right: max(4px, 1vw);
+
+    user-select: none;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.hamburger span {
+    position: relative;
+    display: block;
+    z-index: 5;
+    width: 50px;
+    height: 4px;
+    margin-bottom: 16px;
+    background-color: white;
+    border-radius: 5px;
+    transform-origin: 0 0;
+    transition: 0.5s;
+}
+.hamburger.is-active span:nth-child(1){
+    transform: translate(3px, 5px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(16px);
+    background-color: var(--dgreen);
+}
+.hamburger.is-active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+.hamburger.is-active:hover span {
+    background-color: var(--lgreen);
+}
+
+/*Nav if big screen*/
+.menu{
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+}
+.menu a{
+    color: white;
+    margin: 0 max(16px, 4vw);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 1em;
+}
+#home {
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.4s;
+    line-height: 1em;
+}
+.menu a:hover, .menu a:active{
+    color: var(--lgreen);
+}
+#home:hover, #home:active {
+    color: var(--lgreen);
+}
+
+.mobile {
+    display: block;
+    position: fixed;
+    top: max(40px, 10vh);
+    left: 100vw;
+    width: 20vw;
+    height: max(160px, 40vh);
+    z-index: 9;
+    background-color: var(--dgreen);
+    opacity: 90%;
+    padding-bottom: max(12px, 3vh);
+    transition: 0.4s;
+    border: 2px solid white;
+    border-radius: 1px;
+}
+.mobile a {
+    display: block;
+    margin-bottom: max(20px, 5vh);
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 1em;
+}
+.mobile.is-active {
+    left: 80vw;
+}
+.mobile a:hover, .mobile a:active {
+    color: var(--lgreen);
+}
+
+/*Adjust menu type based on screen size*/
+@media (min-width: 1200px){
+    .hamburger{
+        display: none;
+    }
+    .mobile{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+}
+/*^Nav bar^*/
