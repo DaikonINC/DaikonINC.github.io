@@ -52,7 +52,7 @@ function startCanvas() {
 
     //populate
     for (let i = 0; i < 10; i++) {
-      setTimeout(addLeaf,(+2000*i));
+      setTimeout(addLeaf,(3500*i) + Math.random()*1000 - 500);
     }
 
     window.requestAnimationFrame(updatePosition);
@@ -67,7 +67,7 @@ function updatePosition() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < leaves.length; i++) {
         leaves[i][2] += 1
-        var x = canvas.width / 2 + canvas.width / 2 * Math.sin(leaves[i][0]-leaves[i][2] * Math.PI / 540);
+        var x = (canvas.width / 2 - img.width / 4) + (canvas.width / 2 - img.width / 4) * Math.sin(leaves[i][0]-leaves[i][2] * Math.PI / 540);
         var y = leaves[i][1]+ (leaves[i][2]/2)*(leaves[i][3]/50 +0.5)
          // if out of bounds, go back up
         if(y >= canvas.height){
