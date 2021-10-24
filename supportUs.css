@@ -4,6 +4,14 @@ body{
     font-family: Comfortaa,cursive;
     color: white;
 }
+
+#background{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: -1;
+}
+
 img.subsection{
     display:block;
     width: 80%;
@@ -42,7 +50,9 @@ div.main-center h1{
     -webkit-transition-duration: 0.5s;
 }
 .collumn-content:hover{
+    
     box-shadow: rgb(0,90,0) 10px 10px;
+    box-shadow: rgba(0,0,0,0.3) 10px 10px;
     transform: translate(-10px,-10px);
 }
 .collumn-header{
@@ -75,7 +85,7 @@ div.main-center h1{
 }
 .button-container {
     text-align: center;
-    height: inherit;
+    height: auto;
     width: inherit;
 }
 .button{
@@ -89,7 +99,7 @@ div.main-center h1{
 }
 
 #donateBtn{
-    height:10%;
+    height:30%;
     width: 60%;
 }
 
