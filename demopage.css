@@ -11,14 +11,33 @@ input {
   margin-bottom: 10px;
 }
 
-#submit {
-  margin-top: 10px;
+#submit-button {
+  margin-top: 30px;
+    padding: 10px 40px;
+    background-color: rgb(0, 100, 5);
+    font-family: 'Abril Fatface';
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: yellowgreen;
+  
 }
 
 body {
   text-align: center;
-  
-  /* background-image: url('demopage.jpg');
-  background-size: cover; */
+  background-color: yellowgreen;
+  font-family: Raleway;
+}
 
+#heading {
+  color: rgb(0, 100, 5);
+  font-family: 'Abril Fatface';
+  font-size: 20px;
+}
+
+#metrics {
+  font-size: 30px;
+  font-family: 'Abril Fatface';
+  color: rgb(0, 100, 5);
+ 
 }

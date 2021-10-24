@@ -4,37 +4,64 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="productfeature.css">
-
+  <link rel = "stylesheet" href = "daikon_nav.css">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&display=swap" rel="stylesheet">
   <title>Daikon - Greenhouse</title>
   
 </head>
 <body>
   <header>
-    <nav>
-      <a href="home.html" id="comp-name">DAIKON</a>
-      <ul>
-        <li><a href="">Product</a></li>
-        <li><a href="">Funding</a></li>
-        <li><a href="">Our Team</a></li>
-        <li><a href="daikon_goals.html">Our Goals</a></li>
-        <li><a href="">Community</a></li>
-      </ul>
-    </nav>
+           <!--Nav bar-->
+           <nav>
+            <div class = "container">
+                <h1><a id = "home" href = "https://daikoninc.github.io/">Daikon</a></h1>
+                <div class = "menu">
+                    <a href = "https://daikoninc.github.io/daikon_productfeature.html"><h3>Products</h3></a>
+                    <a href = "https://daikoninc.github.io/daikon_goals.html"><h3>Goals</h3></a>
+                    <a href = "https://daikoninc.github.io/community_page.html"><h3>Community</h3></a>
+                    <a href = "https://daikoninc.github.io/Team%20Contact.html"><h3>Contact</h3></a>
+                    <a href = "https://daikoninc.github.io/supportUs.html"><h3>Support</h3></a>
+                </div>
+                <button class = "hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <nav class = "mobile">
+            <a href = "https://daikoninc.github.io/daikon_productfeature.html"><h3>Products</h3></a>
+            <a href = "https://daikoninc.github.io/daikon_goals.html"><h3>Goals</h3></a>
+            <a href = "https://daikoninc.github.io/community_page.html"><h3>Community</h3></a>
+            <a href = "https://daikoninc.github.io/contact.html"><h3>Contact</h3></a>
+            <a href = "https://daikoninc.github.io/supportUs.html"><h3>Support</h3></a>
+        </nav>
+        <div class = "gap"></div>
+        <div class = "gap"></div>
+        <!--^Nav bar^-->
+
   </header>
   <br><br><br>
-  <img src="phone_img.png" class="responsive">
-  <div id="info-area">
-  <p id="desc">Greenhouse the app is designed to help you optimize your household and lifestyle to: 
+  <h2 id="heading">Presenting Greenhouse</h2>
+  <img src="demo-img.png" class="responsive">
+  <br>
+  <div id="info-area"> 
+    <p id='top-desc'>Greenhouse the app is designed to help you optimize your household and lifestyle to:</p>
+  <p id="desc"> 
     <ul>
       <li>Save energy</li>
       <li>Save money</li>
       <li>Reduce your carbon footprint!</li>
     </ul>
-    Using it is simple: enter your metrics, ex. energy use costs, watt usage, and Greenhouse will suggest a possible renewable energy solution that will reduce utility cost and energy use, providing a result that is better for the customer and for the environment. 
-  </p>
+    </p>
+    <p>Using it is simple: enter your metrics, ex. energy use costs, watt usage, and Greenhouse will suggest a possible renewable energy solution that will reduce utility cost and energy use, providing a result that is better for the customer and for the environment.</p>
+
   <p>Examples of solutions can be the installation of solar panels, suggestions of different appliances that are more energy efficient, or switching to LED lights. </p>
+  <small id="credits">Image credits: https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/provincial-territorial-energy-profiles/images/on-fg02-lg-eng.png</small>
 </div>
-  <button onclick="openDemoWindow()" id="demo-button">DEMO</button>
+  <button onclick="openDemoWindow()" id="demo-button">Demo</button>
+  
   <script src="productfeature.js"></script>
 </body>
 </html>
