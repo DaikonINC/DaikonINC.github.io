@@ -19,4 +19,5 @@ $(window).scroll(function () {
         $("nav").css("border-bottom", "1px solid white");
         $(".container").css("height", "max(40px, 10vh)");
     }
+    $(".mobile").css("border-bottom", "1px solid white");
 });
