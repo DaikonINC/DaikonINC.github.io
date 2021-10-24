@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Including CSS and JS file -->
+        <!-- Including CSS file -->
         <link rel = "stylesheet" href = "daikon_goals.css">
-        <script src = "daikon_goals.js"></script>
         <!-- Setting viewport-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
-        <!-- Image 1 and corresponding text-->
-        <div id = "NAV">NAV bar to go here</div>
-        <h1 style = "text-align: center;">Our Purpose</h1>
-        <div class = "imgSpace">
-            <img id = "img1" class = "imgPic" src = "https://www.industryglobalnews24.com/images/integrating-art-and-clean-energy.png" alt = "Photo 1">
-            <div class = "imgAnimation">
-                <h1>Animation here</h1>
+        <!--Nav bar-->
+        <nav>
+            <div class = "container">
+                <h1><a id = "home" href = "https://daikoninc.github.io/">Daikon</a></h1>
+                <div class = "menu">
+                    <a href = "https://daikoninc.github.io/daikon_productfeature.html"><h3>Products</h3></a>
+                    <a href = "https://daikoninc.github.io/daikon_goals.html"><h3>Goals</h3></a>
+                    <a href = "https://daikoninc.github.io/community_page.html"><h3>Community</h3></a>
+                    <a href = "https://daikoninc.github.io/contact.html"><h3>Contact</h3></a>
+                    <a href = "https://daikoninc.github.io/supportUs.html"><h3>Support</h3></a>
+                </div>
+                <button class = "hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class = "wire">
-                <div id = "elec1" class = "electricity"></div>
+        </nav>
+        <nav class = "mobile">
+            <a href = "https://daikoninc.github.io/daikon_productfeature.html"><h3>Products</h3></a>
+            <a href = "https://daikoninc.github.io/daikon_goals.html"><h3>Goals</h3></a>
+            <a href = "https://daikoninc.github.io/community_page.html"><h3>Community</h3></a>
+            <a href = "https://daikoninc.github.io/contact.html"><h3>Contact</h3></a>
+            <a href = "https://daikoninc.github.io/supportUs.html"><h3>Support</h3></a>
+        </nav>
+        <div class = "gap"></div>
+        <div class = "gap"></div>
+        <!--^Nav bar^-->
+
+        <h1 id = "pageName">Our Goals</h1>
+
+        <!--Section 1-->
+        <div class = "imgSpace">
+            <img id = "img1" class = "imgPic" src = "https://www.industryglobalnews24.com/images/integrating-art-and-clean-energy.png" alt = "House">
+            <img id = "ani1" class = "imgAnimation" src = "https://mir-s3-cdn-cf.behance.net/project_modules/disp/c5984350715647.58d7f7720346f.gif" alt = "House gif">
+            <div class = "pipe">
+                <div class = "wire"></div>
+                <div class = "electricity elec1" style = "top: min(-48px, -12vh)"></div>
+                <div class = "electricity elec1" style = "top: min(-32px, -8vh)"></div>
             </div>
             <ul id = "text1" class = "imgList">
                 <h2>What we want to do</h2>
@@ -27,14 +55,14 @@
             </ul>
         </div>
 
-        <!-- Image 2 and corresponding text-->
+        <!--Section 2-->
         <div class = "imgSpace">
-            <img id = "img2"class = "imgPic" src = "https://scwcontent.affino.com/AcuCustom/Sitename/DAM/022/green_tech_trees_Adobe.jpg" alt = "Photo 2">
-            <div class = "imgAnimation">Ideas for how animation: 
-                <h1>Animation here</h1>
-            </div>
-            <div class = "wire">
-                <div id = "elec2" class = "electricity"></div>
+            <img id = "img2" class = "imgPic" src = "https://scwcontent.affino.com/AcuCustom/Sitename/DAM/022/green_tech_trees_Adobe.jpg" alt = "Tree">
+            <img id = "ani2" class = "imgAnimation" src = "https://media1.giphy.com/media/VI2UC13hwWin1MIfmi/giphy.gif" alt = "Earth">
+            <div class = "pipe">
+                <div class = "wire"></div>
+                <div class = "electricity elec2" style = "top: min(-48px, -12vh)"></div>
+                <div class = "electricity elec2" style = "top: min(-32px, -8vh)"></div>
             </div>
             <ul id = "text2" class = "imgList">
                 <h2>How?</h2>
@@ -43,19 +71,14 @@
             </ul>
         </div>
 
-        <!-- Image 3 and corresponding text-->
+        <!--Section 3-->
         <div class = "imgSpace">
-            <img id = "img3" class = "imgPic" src = "https://media.npr.org/assets/img/2015/12/17/umbrella_wide-ef0baf5371d9dc5f51ba3acd814a10c5c6153386.jpg" alt = "Photo 3">
-            <div class = "imgAnimation">Ideas for donate animation:
-                <h1>Animation here</h1>
-                <h1>Cycle of money becoming sprout then tree?</h1>
-            </div>
-            <div class = "wire">
-                <div class = "electricity" style = "animation: flowS 1.5s linear infinite;"></div>
-                <div class = "electricity" style = "top: min(-8px, -2vh); animation: flowS 1.5s linear infinite;"></div>
-                <div class = "electricity" style = "top: min(-16px, -4vh); animation: flowS 1.5s linear infinite;"></div>
-                <div class = "electricity" style = "top: min(-24px, -6vh); animation: flowS 1.5s linear infinite;"></div>
-                <div class = "electricity" style = "top: min(-32px, -8vh); animation: flowS 1.5s linear infinite;"></div>
+            <img id = "img3" class = "imgPic" src = "https://media.npr.org/assets/img/2015/12/17/umbrella_wide-ef0baf5371d9dc5f51ba3acd814a10c5c6153386.jpg" alt = "Helping hand">
+            <img id = "ani3" class = "imgAnimation" src = "https://i.pinimg.com/originals/ec/4f/5f/ec4f5f25e85f2e3ce8161f6031aebf80.gif" alt = "Thanks for the help">
+            <div class = "pipe">
+                <div class = "wire"></div>
+                <div class = "electricity" style = "top: min(-48px, -12vh); animation: flowFinal 3s linear infinite;"></div>
+                <div class = "electricity" style = "top: min(-32px, -8vh); animation: flowFinal 3s linear infinite;"></div>
             </div>
             <ul id = "text3" class = "imgList">
                 <h2>We could use your help</h2>
@@ -63,31 +86,25 @@
                 <li><h3>See how you can reduce your carbon footpring at our <a id = "Greenhouse" href = "">Greenhouse page</a></h3></li>
             </ul>
         </div>
+
+        <!--Final section, animation-->
         <div id = "final">
             <div id = "charge"></div>
-            <h2 id = "finh2">A change may seem small, but it can have a big</h2>
-            <button class = "button" onclick = "show()"><h2>Impact!</h2></button>
+            <h3 id = "finh2">All it takes is a small change or idea to have a big</h3>
+            <button class = "button"><h2>Impact!</h2></button>
             <div class = "wifi">
                 <div class = "signal" style = "width: max(20px, 5vw); height: max(16px, 4vh); top: min(-20px, -5vh);"></div>
-                <div class = "signal" style = "width: max(40px, 10vw); height: max(40px, 10vh); top: min(-40px, -10vh); animation-delay: 0.15s;"></div>
-                <div class = "signal" style = "width: max(60px, 15vw); height: max(40px, 10vh); top: min(-60px, -15vh); animation-delay: 0.3s;"></div>
-
-                <div class = "line" style = "transform: rotate(-80deg); left: min(-40px, -10vw)"></div>
-                <div class = "line" style = "transform: rotate(80deg); left: max(40px, 10vw)"></div>
+                <div class = "signal" style = "width: max(40px, 10vw); height: max(40px, 10vh); top: min(-40px, -10vh); animation-delay: 0.2s;"></div>
+                <div class = "signal" style = "width: max(60px, 15vw); height: max(40px, 10vh); top: min(-60px, -15vh); animation-delay: 0.4s;"></div>
             </div>
-            <div class = "person">
-                <div class = "head"></div>
-                <div class = "body"></div>
+            <div id = "gallery">
+                <div class = "side"></div>
+                <img class = "side" src = "https://www.starenergypartners.com/wp-content/uploads/2016/06/Wind-Energy-Is-The-Most-Popular-Alternative-Energy-5-15.png" alt = "Side 1">
+                <img class = "side" src = "https://d3hnfqimznafg0.cloudfront.net/images/Article_Images/ImageForArticle_723(1).jpg" alt = "Side 2">
+                <img class = "side" src = "https://www.woodbusiness.ca/wp-content/uploads/2019/09/Forests-Ontario-tree-planting.jpg" alt = "Side 3">
+                <img class = "side" src = "https://www.thinkgeoenergy.com/wp-content/uploads/2019/08/ClimateChange_lightbulb-1024x683.jpeg" alt = "Side 4">
             </div>
-            <div class = "person" style = "top: max(20px, 5vh)">
-                <div class = "head"></div>
-                <div class = "body"></div>
-            </div>
-            <div class = "person">
-                <div class = "head"></div>
-                <div class = "body"></div>
-            </div>
-        </div>
-
+        <!-- Including JS file -->
+        <script src = "daikon_goals.js"></script>
     </body>
 </html>

@@ -1,14 +1,24 @@
-/*Showing people for bottom animation*/
-function show(){
-    document.getElementsByClassName('person')[0].style.animation = "community 4s linear";
-    document.getElementsByClassName('person')[0].style.animationFillMode = "forwards";
-    document.getElementsByClassName('person')[1].style.animation = "community 4s linear";
-    document.getElementsByClassName('person')[1].style.animationFillMode = "forwards";
-    document.getElementsByClassName('person')[2].style.animation = "community 4s linear";
-    document.getElementsByClassName('person')[2].style.animationFillMode = "forwards";
+//Nav bar
+const hamburger = document.querySelector(".hamburger");
+const mobile_menu = document.querySelector(".mobile");
+hamburger.addEventListener("click", function(){
+    hamburger.classList.toggle("is-active");
+    mobile_menu.classList.toggle("is-active");
+});
+//^Nav bar^
 
-    document.getElementsByClassName('line')[0].style.animation = "community 4s linear";
-    document.getElementsByClassName('line')[0].style.animationFillMode = "forwards";
-    document.getElementsByClassName('line')[1].style.animation = "community 4s linear";
-    document.getElementsByClassName('line')[1].style.animationFillMode = "forwards";
-}
+//Photo gallery
+const button = document.querySelector(".button");
+const sides = document.querySelectorAll(".side");
+var current = sides.length-1;
+button.addEventListener("click", function(){
+    sides[current].style.animation = "slide 3s";
+    sides[current].style.animationFillMode = "forwards";
+    current--;
+    if(current < 0){
+        current = sides.length-1;
+        for(var i = 0; i < sides.length; i++){
+            sides[i].style.animation = "none";
+        }
+    }
+});

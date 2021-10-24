@@ -1,47 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
+
 body {
     /*Setting body to fill screen*/
-    width: 100vw;
-    background-color: rgb(0, 100, 5);
+    width: 97vw;
+    background-color: var(--dgreen);
+    background: linear-gradient(to bottom right, var(--lblue2), var(--lblue), var(--lgreen2), var(--dgreen), var(--dgreen), var(--dgreen2), var(--lyellow), var(--lyellow2));
+}
+
+/*Below are color and heading stylings you need to add/modify to have the same Nav bar*/
+:root {
+    --dgreen: rgb(0, 100, 5);
+    --dgreen2: rgb(20, 139, 26);
+    --dblue: rgb(5, 0, 80);
+    --lblue: rgb(89, 181, 204);
+    --lblue2: rgb(151, 183, 252);
+    --lgreen: rgb(63, 177, 88);
+    --lgreen2: rgb(0, 124, 27);
+    --lorange: rgb(231, 143, 43);
+    --lyellow: rgb(252, 255, 100);
+    --lyellow2:rgb(253, 251, 138);
 }
 
 h1, h2, h3 {
-    font-family: Arial, Helvetica, sans-serif;
     text-shadow: 0 0 max(2px, 0.2vh);
-}
-h2 {
     animation: glow 1s ease-in-out infinite alternate;
+}
+h1, h2 {
+    font-family: 'Comfortaa';
+}
+h3 {
+    font-family: 'Raleway';
 }
 @keyframes glow{
     from{
         text-shadow: 0 0 0.2vh;
     }
     to {
-        text-shadow: 0 0 0.6vh;
+        text-shadow: 0 0 0.4vh;
     }
 }
 h1 {
     color: white;
-    font-size: max(25px, 5vh);
+    font-size: min(5vw, 5vh);
 }
 h2 {
-    font-size: max(16px, 4vh);
+    font-size: min(4vw, 4vh);
 }
 h3 {
-    font-size: max(12px, 3vh);
+    font-size: min(3vw, 3vh);
+}
+/*Gap below nav bar*/
+.gap {
+    height: 5vh;
+}
+/*^Above are color and heading stylings for Nav bar^*/
+
+/*Nav bar*/
+.container {
+    width: 97vw;
+    height: max(40px, 10vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--dgreen);
+    opacity: 90%;
+    border-bottom: 2px solid white;
+}
+nav h1{
+    padding-left: max(20px, 5vw);
+    letter-spacing: max(2px, 0.5vw);
+    text-transform: uppercase;
 }
 
-#NAV {
-    text-align: center;
-    font-size: 4vh;
+/*Nav if small screen*/
+.hamburger {
     display: block;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: green;
-    width: 97vw;
-    height: 5vh;
-    border: 2px solid black;
-    border-radius: 1vw;
+    position: relative;
+    top: 5px;
+    z-index: 5;
+    padding-right: max(4px, 1vw);
+
+    user-select: none;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.hamburger span {
+    position: relative;
+    display: block;
+    z-index: 5;
+    width: 50px;
+    height: 4px;
+    margin-bottom: 16px;
+    background-color: white;
+    border-radius: 5px;
+    transform-origin: 0 0;
+    transition: 0.5s;
+}
+.hamburger.is-active span:nth-child(1){
+    transform: translate(3px, 5px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(16px);
+    background-color: var(--dgreen);
+}
+.hamburger.is-active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+.hamburger.is-active:hover span {
+    background-color: var(--lgreen);
+}
+
+/*Nav if big screen*/
+.menu{
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+}
+.menu a{
+    color: white;
+    margin: 0 max(16px, 4vw);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 1em;
+}
+#home {
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.4s;
+    line-height: 1em;
+}
+.menu a:hover, .menu a:active{
+    color: var(--lgreen);
+}
+#home:hover, #home:active {
+    color: var(--lgreen);
+}
+
+.mobile {
+    display: block;
+    position: fixed;
+    top: max(40px, 10vh);
+    left: 100vw;
+    width: 20vw;
+    height: max(160px, 40vh);
+    z-index: 9;
+    background-color: var(--dgreen);
+    opacity: 90%;
+    padding-bottom: max(12px, 3vh);
+    transition: 0.4s;
+    border: 2px solid white;
+    border-radius: 1px;
+}
+.mobile a {
+    display: block;
+    margin-bottom: max(20px, 5vh);
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 1em;
+}
+.mobile.is-active {
+    left: 80vw;
+}
+.mobile a:hover, .mobile a:active {
+    color: var(--lgreen);
+}
+
+/*Adjust menu type based on screen size*/
+@media (min-width: 1200px){
+    .hamburger{
+        display: none;
+    }
+    .mobile{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+}
+/*^Nav bar^*/
+
+#pageName {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: max(1px, 0.25vw);
 }
 
 /*Image sections - img, corresponding animation box, and text*/
@@ -50,10 +212,11 @@ h3 {
     height: max(320px, 80vh);
 }
 .imgPic {
-    float: left;
-    width: max(200px, 50vw);
+    position: relative;
+    display: inline-block;
+    width: max(180px, 45vw);
     height: max(200px, 50vh);
-    border: 1px solid black;
+    left: max(4px, 1vw);
     border-radius: 1vw;
 }
 .imgAnimation {
@@ -63,8 +226,7 @@ h3 {
     display: inline-block;
     width: max(160px, 40vw);
     height: max(200px, 50vh);
-    left: max(19.2px, 4.8vw);
-    border: 1px solid black;
+    left: max(40px, 10vw);
     border-radius: 1vw;
 }
 .imgList {
@@ -79,93 +241,102 @@ h3 {
     list-style: none;
 }
 
-/*The "wires" transporting clean energy*/
-.wire {
+/*The "wires" transporting energy*/
+.pipe {
     position: absolute;
     left: max(60px, 15vw);
-    width: max(4px, 1vw);
-    height: max(120px, 30vh);
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+}
+.wire {
+    z-index: -1;
+    position: relative;
+    height: max(128px, 32vh);
+    top: min(-4px, -1vh);
+    box-shadow: 0 0 max(8px, 2vw) white;
+    border-left: max(5px, 1.25vw) solid white;
     border-radius: 2px;
 }
 .electricity {
-    z-index: -1;
+    z-index: -2;
     position: absolute;
-    background-color: rgb(194, 89, 204);
-    left: max(1px, 0.25vw);
-    width: max(2px, 0.5vw);
-    height: max(6px, 1.5vh);
-    box-shadow: 0px 0px max(4px, 1vw) rgb(194, 89, 204);
-    background-color: white;
-    box-shadow: 0px 0px max(4px, 1vw) white;
-    animation: flow 1.5s linear infinite;
+    width: max(5px, 1.25vw);
+    height: max(16px, 4vh);
+    box-shadow: 0px 0px max(20px, 5vw) white;
+    animation: flow 3s linear infinite;
 }
 
-/*Animations for flowing electricity*/
-@keyframes flow{
-    from{}
-    to{
-        transform: translate(0, max(240px, 60vh));
+/*Animation for flowing electricity*/
+@keyframes flow {
+    0%{}
+    100%{
+        transform: translate(0, max(184px, 46vh));
     }
 }
-@keyframes flowS{
-    from{}
-    to{
-        box-shadow: 0 0 0 white;
-        transform: translate(0, max(168px, 42vh));
+@keyframes flowFinal{
+    0%{}
+    100%{
+        transform: translate(0, max(180px, 45vh));
+        box-shadow: none;
     }
 }
 
-/*Individual images and text and such*/
-#img1 {
-    box-shadow: 0px 0px max(40px, 10vw) rgb(194, 89, 204);
+/*Individual image borders, text, "electricity" and such*/
+#img1, #ani1 {
+    box-shadow: 0px 0px max(20px, 5vw) var(--lblue);
 }
-#elec1 {
-    background-color: rgb(89, 181, 204);
-    box-shadow: 0px 0px max(4px, 1vw) rgb(89, 181, 204);
+.elec1 {
+    box-shadow: 0px 0px max(12px, 3vw) var(--lblue);
 }
 #text1 {
-    color:rgb(194, 89, 204);
+    color: var(--lblue);
 }
-#img2 {
-    box-shadow: 0px 0px max(40px, 10vw) rgb(63, 177, 88);
+#img2{
+    box-shadow: 0px 0px max(20px, 5vw) var(--lgreen);
 }
-#elec2 {
-    background-color: rgb(63, 177, 88);
-    box-shadow: 0px 0px max(4px, 1vw) rgb(63, 177, 88);
+#ani2 {
+    box-shadow: 0px 0px max(20px, 5vw) var(--dblue);
+}
+.elec2 {
+    box-shadow: 0px 0px max(12px, 3vw) var(--lgreen);
 }
 #text2 {
-    color: rgb(63, 177, 88);
+    color: var(--lgreen);
 }
 #img3 {
-    box-shadow: 0px 0px max(40px, 10vw) rgb(100, 73, 255);
+    box-shadow: 0px 0px max(20px, 5vw) var(--lblue2);
+}
+#ani3 {
+    box-shadow: 0px 0px max(20px, 5vw) var(--lyellow);
 }
 #text3 {
-    color: rgb(100, 73, 255);
+    color: var(--lorange);
 }
 #funding {
-    color: rgb(89, 181, 204);
+    color: var(--lorange);
 }
-#Greenhouse {
-    color: rgb(63, 177, 88);
+#Greenhouse, #funding {
+    color: var(--lorange);
+    transition: 0.4s;
+}
+#funding:hover, #Greenhouse:hover {
+    color: white;
 }
 
 /*Final animation box*/
 #final {
     margin: auto;
-    width: max(320px, 80vw);
+    width: 97vw;
     height: max(320px, 80vh);
     text-align: center; 
     color: white;
-    border: 1px solid black;
+    border: 2px solid white;
     border-radius: 1vw;
     box-shadow: 0px 0px max(4px, 1vw) white;
 }
 #finh2{
-    width: max(320px, 80vw);
+    text-align: center;
+    width: max(320px, 97vw);
     height: max(40px, 4vh);
-    overflow: auto;
+    overflow: show;
 }
 #charge {
     z-index: -1;
@@ -190,20 +361,17 @@ h3 {
     background-color: black;
     color: white;
     cursor: pointer;
-    animation: bgChange 20s infinite alternate;
+    animation: bgChange 16s infinite alternate;
 }
 @keyframes bgChange{
-    0%{background-color: black;}
-    10%{background-color: rgb(121, 218, 250);}
-    20%{background-color: rgb(22, 22, 148);}
-    30%{background-color: rgb(170, 83, 97);}
-    40%{background-color: purple;}
-    50%{background-color: orange;}
-    60%{background-color: red;}
-    70%{background-color: rgb(219, 219, 49);}
-    80%{background-color: rgb(95, 235, 95);}
-    90%{background-color: rgb(8, 155, 8);}
-    100%{background-color: black;}
+    12.5%{background-color: var(--dgreen)}
+    25%{background-color: var(--lgreen2);}
+    37.5%{background-color: var(--lgreen);}
+    50%{background-color: var(--lblue);}
+    62.5%{background-color: var(--lblue2);}
+    75%{background-color: var(--lgreen);}
+    87.5%{background-color: var(--lgreen2);}
+    100%{background-color: var(--dgreen)}
 }
 
 /*Final Animation*/
@@ -222,51 +390,49 @@ h3 {
     border: 4px solid transparent;
     border-bottom-color: rgb(70, 255, 110);
     border-radius: 100%;
-    animation: community 1s linear infinite alternate;
+    animation: broadcast 1.5s linear infinite alternate, borderChange 16s infinite alternate;
 }
-.line {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-    top: min(-60px, -15vh);
-    width: max(2px, 0.5vw);
-    height: min(25vw, 25vh);
-    opacity: 0;
-    border: 1px solid rgb(70, 255, 110);
-    border-radius: 1vw;
-}
-.person {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-    width: max(60px, 15vw);
-    height: max(60px, 15vw);
-    padding: max(12px, 3vw) max(12px, 3vw) max(12px, 3vw) max(12px, 3vw);
-    opacity: 0;
-}
-@keyframes community {
+@keyframes broadcast{
     from{
         opacity: 0;
     }
-    to{
+    to {
         opacity: 100;
     }
 }
-.head {
-    position: relative;
-    margin: auto;
-    width: max(20px, 5vw);
-    height: max(20px, 5vw);
-    background-color: white;
-    border-radius: max(10px, 2.5vw);
-}
-.body {
-    position: relative;
-    margin: auto;
-    width: max(40px, 10vw);
-    height: max(20px, 5vw);
-    background-color: white;
-    border-top-left-radius: max(20px, 5vw);
-    border-top-right-radius: max(20px, 5vw);
+@keyframes borderChange{
+    12.5%{border-bottom-color: var(--dgreen)}
+    25%{border-bottom-color: var(--lgreen2);}
+    37.5%{border-bottom-color: var(--lgreen);}
+    50%{border-bottom-color: var(--lblue);}
+    62.5%{border-bottom-color: var(--lblue2);}
+    75%{border-bottom-color: var(--lgreen);}
+    87.5%{border-bottom-color: var(--lgreen2);}
+    100%{border-bottom-color: var(--dgreen)}
 }
 
+#gallery {
+    display: grid;
+    position: relative;
+    margin: auto;
+}
+.side {
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    width: max(120px, 30vw);
+    height: max(120px, 30vh);
+    transition: 1s;
+    border-radius: 1vw;
+}
+@keyframes slide {
+    0% {}
+    50% {
+        transform: translateX(min(-132px, -33vw));
+    }
+    100% {
+        z-index: -1;
+    }
+}
