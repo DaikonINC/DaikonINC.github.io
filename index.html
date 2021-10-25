@@ -4,36 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="daikon_home.css">
+    <link rel="stylesheet" href="daikon_nav.css">
 </head>
 
 <body>
     <header>
-        <ul class="nav-bar">
-            <li><a href="#"> Home </a></li>
-            <li><a href="#"> Product Feature </a></li>
-            <li><a href="#"> Demo </a></li>
-            <li><a href="#"> Funding/Support</a></li>
-            <li><a href="#"> Team/contact </a></li>
-            <li><a href="#"> Company Goals </a></li>
-            <li><a href="#"> Community </a></li>
-        </ul>
-        <h1> Daikon  </h1>
-        <div class = "catchphrases">
-            <span class="txt-type" data-wait="700"
+        <nav>
+            <div class="container">
+                <h1><a id="home" href="https://daikoninc.github.io/index.html">Daikon</a></h1>
+                <div class="menu">
+                    <a href="https://daikoninc.github.io/daikon_productfeature.html">
+                        <h3>Products</h3>
+                    </a>
+                    <a href="https://daikoninc.github.io/daikon_goals.html">
+                        <h3>Goals</h3>
+                    </a>
+                    <a href="https://daikoninc.github.io/community_page.html">
+                        <h3>Community</h3>
+                    </a>
+                    <a href="https://daikoninc.github.io/Team%20Contact.html">
+                        <h3>Contact</h3>
+                    </a>
+                    <a href="https://daikoninc.github.io/supportUs.html">
+                        <h3>Support</h3>
+                    </a>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <a href="https://daikoninc.github.io/daikon_productfeature.html">
+                <h3>Products</h3>
+            </a>
+            <a href="https://daikoninc.github.io/daikon_goals.html">
+                <h3>Goals</h3>
+            </a>
+            <a href="https://daikoninc.github.io/community_page.html">
+                <h3>Community</h3>
+            </a>
+            <a href="https://daikoninc.github.io/contact.html">
+                <h3>Contact</h3>
+            </a>
+            <a href="https://daikoninc.github.io/supportUs.html">
+                <h3>Support</h3>
+            </a>
+        </nav>
+        <div class="gap"></div>
+        <div class="gap"></div>
+        <div class="welcome-text">
+            <h1> Daikon </h1>
+            <h2>
+                <span class=txt-type data-wait="700"
                     data-words='["Save money. ", "Go Green. ", "Help the Planet. ", " Live Greener. "]'></span>
+            </h2>
+            <h2>A short description about our product will go here. "an app to help save you money"</h2>
+            <div class="gap"></div>
+            <!-- logos will come shortly -->
+            <ul href = "Instagram.com"> instagram</ul> 
+            <ul href = "Twitter.com">Twitter</ul>
         </div>
+  
 
-        <div class="description"> 
-            A short description about our product will go here. "an app to help save you money"
-        </div>
-
-        <ul class = "socials">follow our socials!
-            <li><a href="#"> Instagram </a></li>
-            <li><a href="#"> Twitter </a></li>
-        </ul>
-    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="typeWrite.js"></script>
+    <script src="daikon_nav.js"></script>
 </body>
 
 </html>
