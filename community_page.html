@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="utf-8"> 
 <title>daikon_contact</title>
-</style>
-</head>
-<body>
-
-<div class="header">
-  <p></p>
-  <h1>Community</h1>
-  <p>You can find anything you interested here</p>
-</div>
-
-<ul>
-  <li><a class="active" style="float:left" href=link rel="home"> (Logo)Daikon</a></li>
-  <li><a href="#" style="float:right">Contact</li>
-  <li><a href="#" style="float:right">Company Goals</a></li>
-  <li><a href="#" style="float:right">Product Feature</a></li>
-  <li><a href="#" style="float:right">Funding</a></li>
-</ul>
-
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h2>Upcoming Events</h2>
-      <h5>dd/mm/yy</h5>
-      <img src="https://i.loli.net/2021/10/17/ldty4TDrmZe7XRN.jpg" alt="event" width="1400" height="390">
-      <p>We welcome you to connect in our community. Stay in touch to check out upcoming events in Community and where you can find us in Connect.</p>
-    </div> 
-    
- <div class="card">
-      <h2>Customer Pictures</h2>
-      <h3>customer1</h3>
-    <img src="https://i.loli.net/2021/10/18/qVGMZOh6NSmwdKs.jpg"​ alt="event" width="450" height="200">
-    <p>I like this because......</p>
-      <h3>customer2</h3>
-    <img src="https://i.loli.net/2021/10/18/E5WDnKMAZl7Rgi2.png" alt="event" width="450" height="200">
-    <p>I like this because......</p>
+  <head>
+    <link rel = "stylesheet" href = "daikon_community.css">
+  </head>
+  
+  <body>
+    <nav>
+      <div class = "container">
+        <h1><a id = "home" href = "https://daikoninc.github.io/">Daikon</a></h1>
+                <div class = "menu">
+                    <a href = "https://daikoninc.github.io/daikon_productfeature.html"><h3>Products</h3></a>
+                    <a href = "https://daikoninc.github.io/daikon_goals.html"><h3>Goals</h3></a>
+                    <a href = "https://daikoninc.github.io/community_page.html"><h3>Community</h3></a>
+                    <a href = "https://daikoninc.github.io/Team%20Contact.html"><h3>Contact</h3></a>
+                    <a href = "https://daikoninc.github.io/supportUs.html"><h3>Support</h3></a>
+                </div>
+                <button class = "hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+      </nav>
+      <div class='middleslogan'>
+        <h1>Welcome to our Community!</h1>
+        <h2>You can find anything you interested here.</h2>
+         <span></span>
+         <span></span>
+         <span></span>
+        </div>
     </div>
+  <br>
+      </br>
+ <br>
+      </br>
+ <br>
+      </br>
 
-<div class="card">
-   <h2>Survey</h2>
-      <h4>Customer Feedback Questionnaire</h4>
-      <img src="https://i.loli.net/2021/10/17/R2WldBfXpETzFvm.jpg"alt="questionnaire"  width="1000" height="380" href=link rel="questionnaire">
-      <p>Thank you very much for your strong support and trust. In order to further improve the quality of service, we are looking for advice on our business, service, maintenance and other aspects. We sincerely hope that you can fill in this questionnaire to provide valuable comments and suggestions.</p>
+     <br>
+      </br>
+<div>
+    <h1 style="text-align: center;">Upcoming Events</h1>
+    <div class="countercontainer">
+      <img src="https://i.loli.net/2021/10/17/ldty4TDrmZe7XRN.jpg"
+                            alt="event" class="subs">
+                        <p>We welcome you to connect in our community. Stay in touch to check out upcoming events in Community and where you can find us in Connect.</p>
+      
+        </div>
     </div>
-   
-<div class="card">
-  <h2>Reviews</h2>
-  <p>We welcome you to speak your mind on this sheet 👇</p>
-  <form action="demo_form.php">
-  Name: <input type="text" name="fname"><br>
-    <br>
-   Write:  <input type="text" name="fname"><br>
-  <input type="image" src="https://i.loli.net/2021/10/18/Qi3Fe6vkWgGrZsz.jpg" alt="Submit" align="middle" width="48" height="48">
-</form>
-  </div>
-</div>
+  <br>
+      </br>
+ <br>
+      </br>
+ <br>
+      </br>
+  <div>
+    <h1 style="text-align: center;">Survey</h1>
+    <div class="countercontainer">
+      <img src="https://i.loli.net/2021/10/17/R2WldBfXpETzFvm.jpg"
+alt="survey" class="subs">
+                        <p>Thank you very much for your strong support and trust. In order to further improve the quality of service, we are looking for advice on our business, service, maintenance and other aspects. We sincerely hope that you can fill in this questionnaire to provide valuable comments and suggestions.</p>
+      <button class="button button1" onclick="openquestionnaire()" id="button">Click</button>
+        </div>
+    </div>
+  <br>
+      </br>
+ <br>
+      </br>
+ <br>
+      </br>
+  <div>
+    <h1 style="text-align: center;">Customer Pictures</h1>
+  <table class="doublecard">
+        <tbody>
+            <tr>
+                <td class="card">
+                    <div class=cardcontent>
+                        <h3 class="cardheader" >	
+@Wonderfullife</h3>
+                        <img src="https://i.loli.net/2021/10/25/1qyrclYVELQRWMB.png"  alt="customer picture" class="subs">
+                        <p>I love this because it's turned my life around. I don't have to worry as much about carbon emissions as I used to. That makes me happy.</p>
+                    </div>
+                </td>
+                <td class="card">
+                    <div class=cardcontent>
+                      <h3 class="cardheader" >	
+@greenwalker</h3>
+                        <img src="https://i.loli.net/2021/10/25/z7xCNt9qXUcylO2.png"
+alt="customer picture" class="subs">
+                        <p>This is pretty cool. I can't wait to recommend it to everyone I know. Greenhouse has not only improved my quality of life, but also introduced me to my girlfriend. This has changed my life without a doubt!</p>
+                        </div>
+                    </div>
 
-<div class="footer">
-  <h2> Other information（Contact or else）</h2>
-</div>
-
-</body>
-</html>
