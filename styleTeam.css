@@ -55,10 +55,23 @@ input{
     display: inline-block;
     background: rgb(3, 53, 5);
     color: white;
+    font-size: 20px;
     border: rgb(6, 85, 9);
     font-family: 'Comfortaa', cursive;
     width: 100px;
 }
 input:hover{
     box-shadow:7px 7px 9px  black;
+}
+script{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+div{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+.profile{
+  font-family: 'Comfortaa', cursive;
+  color: white;
 }
