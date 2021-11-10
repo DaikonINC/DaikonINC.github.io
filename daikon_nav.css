@@ -60,6 +60,8 @@ h3 {
     transition: height 0.35s ease;
 }
 nav {
+    transform: translate3d(0,0,0);
+    /* ^Prevents "flickering" for transforming elements */
     position: fixed;
     top: 0;
     left: 0;
