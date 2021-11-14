@@ -10,7 +10,7 @@ body {
 	margin: auto;
 }
 header {
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(landing.jpg);
+	background: linear-gradient(to bottom right, var(--lblue2), var(--lblue), var(--lgreen2), var(--dgreen), var(--dgreen), var(--dgreen2), var(--lyellow), var(--lyellow2));
 	height: 100vh;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -18,21 +18,77 @@ header {
 	position: relative;
 }
 .welcome-text {
-	position: absolute;
-	width: 600px;
-	height: 300px;
-	margin: 20% 30%;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 80vh;
+	margin-top: 100px;
+	justify-content: center;
+	align-items: center; 
 }
-.welcome-text h1 {
-	text-align: center;
-	color: green;
-	text-transform: uppercase;
-	font-size: 60px;
+.fa-instagram{
+	font-size: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	color: white;
+  }
+
+.landing {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center; 
 }
 
+.titles {
+	margin-right: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+}
+
+.fa-twitter-square{
+	font-size: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	color: white;
+  }
+
+  .fa-instagram:hover{
+	color: #D8D8D8;
+  }
+
+  .fa-twitter-square:hover{
+	color: #D8D8D8;
+  }
+.txt-type > .txt {
+    border-right: 0.2rem solid white;
+	padding: 3px;
+  }
+.welcome-text h1 {
+	text-align: center;
+	color: #90EE90;
+	text-transform: uppercase;
+	font-size: 90px;
+
+}
+.welcome-text img {
+	width: 400px;
+	height: 300px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
 .welcome-text h2 {
     color: #00fecb;
+	text-align: center;
+	font-size: 40px;
+}
+
+.welcome-text h3 {
+    color: white;
+	text-align: center;
+	font-size: 30px;
 }
 
 .welcome-text span{
@@ -46,20 +102,18 @@ header {
 	font-size: 30px;
 }
 
-
-.welcome-text a {
-	border: 1px solid #fff;
-	padding: 10px 25px;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 14px;
+button{
+	width: 125px; 
+	height: 33px; 
+	background-color: transparent; 
+	color:white;
 	margin-top: 20px;
-	display: inline-block;
-	color: #fff;
+	font-size: 17px;
+	border: 0.5 solid white;
 }
-.welcome-text a:hover {
-	background: #fff;
-	color: #333;
+
+button:hover{
+	color: green;
 }
 /*resposive*/
 
