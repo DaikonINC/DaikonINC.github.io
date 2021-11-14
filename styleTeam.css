@@ -1,4 +1,5 @@
-div{
+
+div {
     display: flex;
     justify-content: space-between;
     
@@ -8,6 +9,7 @@ div{
   }
   body {
     background-color: rgb(0,100, 5);
+    
   } 
   h1{
 
@@ -41,9 +43,9 @@ h2{
 }
 button{
     display: inline-block;
-    background: rgb(3, 53, 5);
+    background: rgb(0, 100, 5);
     color: white;
-    border: rgb(6, 85, 9);
+    border: none;
     font-family: 'Comfortaa', cursive;
     width: 100px;
 }
@@ -53,12 +55,51 @@ button{
 
 input{
     display: inline-block;
-    background: rgb(3, 53, 5);
+    background: rgb(0, 100, 5);
     color: white;
-    border: rgb(6, 85, 9);
+    font-size: 17px;
+    border: none;
     font-family: 'Comfortaa', cursive;
-    width: 100px;
+    width: 200px;
 }
 input:hover{
-    box-shadow:7px 7px 9px  black;
+    box-shadow:7px 7px 9px  whitesmoke;
+    
+    color:whitesmoke;
+}
+script{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+div {
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+.profile{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+.img-profil1:hover{
+  box-shadow: 7px 7px 9px whitesmoke;
+
+}
+.img-profil2:hover{
+  box-shadow: 7px 7px 9px whitesmoke;
+
+}
+.img-profil3:hover{
+  box-shadow: 7px 7px 9px whitesmoke;
+
+}
+.img-profil4:hover{
+  box-shadow: 7px 7px 9px whitesmoke;
+
+}
+.img-profil5:hover{
+  box-shadow: 7px 7px 9px whitesmoke;
+
+}
+.img-profil6:hover{
+  box-shadow: 7px 7px 9px whitesmoke;
+
 }
