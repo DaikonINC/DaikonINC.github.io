@@ -15,21 +15,30 @@ div {
 
     font-family: font-family: 'Comfortaa', cursive;
   }
+  .img-profil1{
+    width: 320px;
+    height: 320px;
+  }
   .img-profil2{
-    width: 400px;
+    width: 320px;
+    height: 320px;
   }
 
   .img-profil3{
-    width: 400px;
+    width: 320px;
+    height: 320px;
 }
 .img-profil4{
-    width: 400px;
+  width: 320px;
+  height: 320px;
 }
 .img-profil5{
-    width: 400px;
+  width: 320px;
+  height: 320px;
 }
 .img-profil6{
-    width: 400px;
+  width: 320px;
+  height: 320px;
 }
 h2{
     font-size: x-large;
