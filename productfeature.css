@@ -78,7 +78,7 @@ nav li {
 
 #info-area {
   width: 500px; 
-  height: 400px;
+  height: 350px;
   background-color: white;
   float: right; 
   padding: 30px;
@@ -93,7 +93,7 @@ nav li {
   margin-top: 40px;
   margin-bottom: 100px;
   float: right;
-  margin-right: 200px;
+  margin-right: 245px;
   padding: 10px 50px;
   background-color: yellowgreen;
   font-family: 'Abril Fatface';
